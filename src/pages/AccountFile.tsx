@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Layout from "../layout/default";
 import Papa from 'papaparse';
 import { FileUpload } from '../components/FileUpload';
 import { TransactionList } from '../components/TransactionList';
@@ -70,10 +71,11 @@ function Home() {
   };
 
   return (
+    <Layout>
     <div className="min-h-screen bg-gray-100">
       <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
         <div className="flex items-center mb-8">
-          <BarChart3 className="h-8 w-8 text-blue-500 mr-2" />
+          <BarChart3 className="h-8 w-8 text-green-500 mr-2" />
           <h1 className="text-3xl font-bold text-gray-900">
             Bank Statement Analyzer
           </h1>
@@ -105,6 +107,7 @@ function Home() {
         )}
       </div>
     </div>
+    </Layout>
   );
 }
 

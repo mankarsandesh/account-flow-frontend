@@ -30,7 +30,7 @@ import { Logo } from "../components/Logo";
 
 const navigation = [
   { name: "Home", href: "#", icon: HomeIcon, current: true },
-  { name: "Account Statment", href: "#", icon: ClockIcon, current: false },
+  { name: "Upload Statment", href: "/upload-statement", icon: ClockIcon, current: false },
   { name: "Category", href: "#", icon: ScaleIcon, current: false },
   { name: "Banks", href: "#", icon: CreditCardIcon, current: false },
   { name: "Recipients", href: "#", icon: UserGroupIcon, current: false },

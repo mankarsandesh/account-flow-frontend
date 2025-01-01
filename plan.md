@@ -1,10 +1,10 @@
 Account Flow Frontend 
 
-Landing 
-Login
-Forgot password
-Home page 
-settings
+Landing  Done 
+Login - Done
+Forgot password - Done 
+Home page - Done 
+settings - 
 category 
 clients
 upload_file
