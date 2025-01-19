@@ -1,13 +1,15 @@
-import { Link } from "react-router-dom";
 import { Logo } from "./Logo";
+type ForgotProps = {
+  switchToLogin: () => void;
+};
 
-export default function Forgot() {
+export default function Forgot({ switchToLogin }: ForgotProps): JSX.Element {
   return (
     <>
       <div>
         <Logo />
         <h2 className="mt-8 text-2xl/9 font-bold tracking-tight text-gray-900">
-          Forgot Password 
+          Forgot Password
         </h2>
         <p className="mt-2 text-sm/6 text-gray-500">
           Not a member?{" "}
@@ -40,8 +42,6 @@ export default function Forgot() {
                 />
               </div>
             </div>
-
-          
 
             <div className="flex items-center justify-between">
               <div className="flex gap-3">
@@ -84,12 +84,12 @@ export default function Forgot() {
               </div>
 
               <div className="text-sm/6">
-                <Link
-                  to="/login"
+                <button
+                  onClick={switchToLogin}
                   className="font-semibold text-green-600 hover:text-green-500"
                 >
-                 Sign In
-                </Link>
+                  Sign In
+                </button>
               </div>
             </div>
 

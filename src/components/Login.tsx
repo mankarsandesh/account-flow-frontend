@@ -1,7 +1,9 @@
-import { Link } from "react-router-dom";
 import { Logo } from "./Logo";
+type LoginProps = {
+  switchToForgot: () => void;
+};
 
-export default function Login() {
+export default function Login({ switchToForgot }: LoginProps): JSX.Element {
   return (
     <>
       <div>
@@ -101,12 +103,12 @@ export default function Login() {
               </div>
 
               <div className="text-sm/6">
-                <a
-                  href={'/login?forgotpassword'}
+                <button
+                  onClick={switchToForgot}
                   className="font-semibold text-green-600 hover:text-green-500"
                 >
-                  Forgot password?
-                </a>
+                  Forgot Password?
+                </button>
               </div>
             </div>
 
