@@ -5,7 +5,7 @@ import { ChevronDownIcon } from "lucide-react";
 export default function SearchBar() {
   return (
     <>
-      <div className="flex flex-1 justify-between px-4 sm:px-6 lg:mx-auto lg:max-w-6xl lg:px-8">
+      <div className="flex flex-1 justify-between px-4 sm:px-6 lg:mx-auto lg:max-w-8xl lg:px-8 border-b-2">
         <div className="flex flex-1">
           <form action="#" method="GET" className="grid flex-1 grid-cols-1">
             <input

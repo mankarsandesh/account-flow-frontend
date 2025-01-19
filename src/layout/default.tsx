@@ -9,43 +9,11 @@ import {
 } from "@headlessui/react";
 import {
   Bars3CenterLeftIcon,
-  ClockIcon,
-  CogIcon,
-  CreditCardIcon,
-  DocumentChartBarIcon,
-  HomeIcon,
-  QuestionMarkCircleIcon,
-  ScaleIcon,
-  ShieldCheckIcon,
-  UserGroupIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import SearchBar from "../components/ui/searchbar";
 import { Logo } from "../components/Logo";
-
-const navigation = [
-  { name: "Home", href: "/home", icon: HomeIcon, current: true },
-  {
-    name: "Upload Statment",
-    href: "/upload-statement",
-    icon: ClockIcon,
-    current: false,
-  },
-  { name: "Category", href: "/category", icon: ScaleIcon, current: false },
-  { name: "Banks", href: "/banks", icon: CreditCardIcon, current: false },
-  {
-    name: "Recipients",
-    href: "/recipients",
-    icon: UserGroupIcon,
-    current: false,
-  },
-  { name: "Reports", href: "#", icon: DocumentChartBarIcon, current: false },
-];
-const secondaryNavigation = [
-  { name: "Settings", href: "#", icon: CogIcon },
-  { name: "Help", href: "#", icon: QuestionMarkCircleIcon },
-  { name: "Privacy", href: "#", icon: ShieldCheckIcon },
-];
+import { navigation, secondaryNavigation } from '../utils/menu'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
