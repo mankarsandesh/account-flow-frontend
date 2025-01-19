@@ -5,15 +5,10 @@ import {
   Dialog,
   DialogBackdrop,
   DialogPanel,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuItems,
   TransitionChild,
 } from "@headlessui/react";
 import {
   Bars3CenterLeftIcon,
-  BellIcon,
   ClockIcon,
   CogIcon,
   CreditCardIcon,
@@ -29,11 +24,21 @@ import SearchBar from "../components/ui/searchbar";
 import { Logo } from "../components/Logo";
 
 const navigation = [
-  { name: "Home", href: "#", icon: HomeIcon, current: true },
-  { name: "Upload Statment", href: "/upload-statement", icon: ClockIcon, current: false },
-  { name: "Category", href: "#", icon: ScaleIcon, current: false },
-  { name: "Banks", href: "#", icon: CreditCardIcon, current: false },
-  { name: "Recipients", href: "#", icon: UserGroupIcon, current: false },
+  { name: "Home", href: "/home", icon: HomeIcon, current: true },
+  {
+    name: "Upload Statment",
+    href: "/upload-statement",
+    icon: ClockIcon,
+    current: false,
+  },
+  { name: "Category", href: "/category", icon: ScaleIcon, current: false },
+  { name: "Banks", href: "/banks", icon: CreditCardIcon, current: false },
+  {
+    name: "Recipients",
+    href: "/recipients",
+    icon: UserGroupIcon,
+    current: false,
+  },
   { name: "Reports", href: "#", icon: DocumentChartBarIcon, current: false },
 ];
 const secondaryNavigation = [
@@ -47,6 +52,7 @@ function classNames(...classes) {
 }
 
 export default function Example({ children }: any) {
+  const pageName = window.location.pathname;
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
@@ -84,11 +90,7 @@ export default function Example({ children }: any) {
                 </div>
               </TransitionChild>
               <div className="flex shrink-0 items-center px-4">
-                <img
-                  alt="Easywire logo"
-                  src="https://tailwindui.com/plus/img/logos/mark.svg?color=green&shade=300"
-                  className="h-8 w-auto"
-                />
+                <Logo reverse={false} />
               </div>
               <nav
                 aria-label="Sidebar"
@@ -99,9 +101,9 @@ export default function Example({ children }: any) {
                     <a
                       key={item.name}
                       href={item.href}
-                      aria-current={item.current ? "page" : undefined}
+                      aria-current={item.href ? "page" : undefined}
                       className={classNames(
-                        item.current
+                        item.href === pageName
                           ? "bg-green-800 text-white"
                           : "text-green-100 hover:bg-green-600 hover:text-white",
                         "group flex items-center rounded-md px-2 py-2 text-base font-medium"
@@ -156,9 +158,9 @@ export default function Example({ children }: any) {
                   <a
                     key={item.name}
                     href={item.href}
-                    aria-current={item.current ? "page" : undefined}
+                    aria-current={item.href ? "page" : undefined}
                     className={classNames(
-                      item.current
+                      item.href === pageName
                         ? "bg-green-800 text-white"
                         : "text-white hover:bg-green-700 hover:text-white",
                       "group flex items-center rounded-md px-2 py-2 text-sm/6 font-medium"
