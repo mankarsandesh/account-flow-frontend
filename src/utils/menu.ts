@@ -21,15 +21,15 @@ export const navigation = [
   { name: "Category", href: "/category", icon: ScaleIcon, current: false },
   { name: "Banks", href: "/banks", icon: CreditCardIcon, current: false },
   {
-    name: "Recipients",
-    href: "/recipients",
+    name: "Users",
+    href: "/users",
     icon: UserGroupIcon,
     current: false,
   },
   { name: "Reports", href: "#", icon: DocumentChartBarIcon, current: false },
 ];
 export const secondaryNavigation = [
-  { name: "Settings", href: "#", icon: CogIcon },
-  { name: "Help", href: "#", icon: QuestionMarkCircleIcon },
-  { name: "Privacy", href: "#", icon: ShieldCheckIcon },
+  { name: "Settings", href: "/settings", icon: CogIcon },
+  { name: "FAQ", href: "/faq", icon: QuestionMarkCircleIcon },
+  { name: "Privacy", href: "/privacy", icon: ShieldCheckIcon },
 ];

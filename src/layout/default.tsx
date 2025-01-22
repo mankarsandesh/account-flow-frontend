@@ -119,7 +119,7 @@ export default function Example({ children }: any) {
             </div>
             <nav
               aria-label="Sidebar"
-              className="mt-5 flex flex-1 flex-col divide-y divide-green-800 overflow-y-auto"
+              className="mt-5 flex flex-1 flex-col divide-y divide-gray-500 overflow-y-auto"
             >
               <div className="space-y-1 px-2">
                 {navigation.map((item) => (
@@ -148,11 +148,16 @@ export default function Example({ children }: any) {
                     <a
                       key={item.name}
                       href={item.href}
-                      className="group flex items-center rounded-md px-2 py-2 text-sm/6 font-medium text-green-100 hover:bg-green-600 hover:text-white"
+                      className={classNames(
+                        item.href === pageName
+                          ? "bg-green-800 text-white"
+                          : "text-green-100 hover:bg-green-600 hover:text-white",
+                        "group flex items-center rounded-md px-2 py-2 text-base font-medium"
+                      )}
                     >
                       <item.icon
                         aria-hidden="true"
-                        className="mr-4 size-6 text-green-200"
+                        className="mr-4 size-6 text-white"
                       />
                       {item.name}
                     </a>
